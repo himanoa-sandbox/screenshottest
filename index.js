@@ -17,13 +17,11 @@ app.on('ready', function () {
     width: size.width * displayInfo.scaleFactor,
     height: size.height * displayInfo.scaleFactor,
     frame: false,
-    show: false,
+    show: true,
     transparent: true,
     resizable: true,
-    'always-on-top': true,
+    alwaysOnTop: true,
   })
-  mainWindow.setFullScreen(true)
-  mainWindow.show()
 
   mainWindow.loadURL(`file://${__dirname}/index.html`)
   mainWindow.on('closed', function () {
